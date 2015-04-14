@@ -1,0 +1,9 @@
+Sales report for _TIMESTAMP_:
+Total Sales: $0.00
+Total Orders: 0
+Average $ per Order: $0
+
+Sales report for _TIMESTAMP_:
+Total Sales: $10.00
+Total Orders: 2
+Average $ per Order: $5

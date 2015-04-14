@@ -1,0 +1,196 @@
+﻿Build started 4/14/2015 1:42:27 PM.
+     1>Project "C:\Dropbox\csi24006\csi24006\code\code.vcxproj" on node 2 (Build target(s)).
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt Employee.cpp Kitchen.cpp LinkedList.cpp Table.cpp final.cpp functions.cpp host.cpp manager.cpp
+         manager.cpp
+     1>c:\dropbox\csi24006\csi24006\code\manager.h(34): error C2504: 'Employee' : base class undefined
+     1>c:\dropbox\csi24006\csi24006\code\manager.cpp(25): error C2533: 'Manager::{ctor}' : constructors not allowed a return type
+     1>c:\dropbox\csi24006\csi24006\code\manager.cpp(59): error C2511: 'void Manager::setTotalSale(double)' : overloaded member function not found in 'Manager'
+                 c:\dropbox\csi24006\csi24006\code\manager.h(33) : see declaration of 'Manager'
+     1>c:\dropbox\csi24006\csi24006\code\manager.cpp(60): error C2597: illegal reference to non-static member 'Manager::mTotalSale'
+     1>c:\dropbox\csi24006\csi24006\code\manager.cpp(64): error C2511: 'void Manager::setNumOfOrders(int)' : overloaded member function not found in 'Manager'
+                 c:\dropbox\csi24006\csi24006\code\manager.h(33) : see declaration of 'Manager'
+     1>c:\dropbox\csi24006\csi24006\code\manager.cpp(65): error C2597: illegal reference to non-static member 'Manager::mNumOfOrders'
+     1>c:\dropbox\csi24006\csi24006\code\manager.cpp(98): error C2065: 'MAX_EMPLOYEES' : undeclared identifier
+     1>c:\dropbox\csi24006\csi24006\code\manager.cpp(100): error C2065: 'employees' : undeclared identifier
+     1>c:\dropbox\csi24006\csi24006\code\manager.cpp(103): error C2065: 'Employee' : undeclared identifier
+     1>c:\dropbox\csi24006\csi24006\code\manager.cpp(103): error C2146: syntax error : missing ';' before identifier 'newEmployee'
+     1>c:\dropbox\csi24006\csi24006\code\manager.cpp(103): error C2065: 'newEmployee' : undeclared identifier
+     1>c:\dropbox\csi24006\csi24006\code\manager.cpp(104): error C2065: 'employees' : undeclared identifier
+     1>c:\dropbox\csi24006\csi24006\code\manager.cpp(104): error C2065: 'MAX_EMPLOYEES' : undeclared identifier
+     1>c:\dropbox\csi24006\csi24006\code\manager.cpp(104): error C2065: 'newEmployee' : undeclared identifier
+     1>c:\dropbox\csi24006\csi24006\code\manager.cpp(119): error C2146: syntax error : missing ';' before identifier 'fout'
+     1>c:\dropbox\csi24006\csi24006\code\manager.cpp(119): error C2065: '_TIMESTAMP_' : undeclared identifier
+     1>c:\dropbox\csi24006\csi24006\code\manager.cpp(127): error C2065: '_TIMESTAMP_' : undeclared identifier
+     1>c:\dropbox\csi24006\csi24006\code\manager.cpp(142): error C2065: 'MAX_EMPLOYEES' : undeclared identifier
+     1>c:\dropbox\csi24006\csi24006\code\manager.cpp(144): error C2065: 'employees' : undeclared identifier
+     1>c:\dropbox\csi24006\csi24006\code\manager.cpp(144): error C2228: left of '.mId' must have class/struct/union
+     1>c:\dropbox\csi24006\csi24006\code\manager.cpp(146): error C2065: 'Employee' : undeclared identifier
+     1>c:\dropbox\csi24006\csi24006\code\manager.cpp(146): error C2146: syntax error : missing ';' before identifier 'newEmployee'
+     1>c:\dropbox\csi24006\csi24006\code\manager.cpp(146): error C2065: 'newEmployee' : undeclared identifier
+     1>c:\dropbox\csi24006\csi24006\code\manager.cpp(147): error C2065: 'newEmployee' : undeclared identifier
+     1>c:\dropbox\csi24006\csi24006\code\manager.cpp(148): error C2065: 'employees' : undeclared identifier
+     1>c:\dropbox\csi24006\csi24006\code\manager.cpp(148): error C2065: 'newEmployee' : undeclared identifier
+     1>c:\dropbox\csi24006\csi24006\code\manager.cpp(154): error C3861: 'pause': identifier not found
+     1>c:\dropbox\csi24006\csi24006\code\manager.cpp(169): error C3861: 'clear': identifier not found
+     1>c:\dropbox\csi24006\csi24006\code\manager.cpp(185): error C3861: 'updateEmployee': identifier not found
+     1>c:\dropbox\csi24006\csi24006\code\manager.cpp(188): error C3861: 'hireEmployee': identifier not found
+     1>c:\dropbox\csi24006\csi24006\code\manager.cpp(191): error C3861: 'fireEmployee': identifier not found
+     1>c:\dropbox\csi24006\csi24006\code\manager.cpp(197): error C3861: 'shutDown': identifier not found
+     1>c:\dropbox\csi24006\csi24006\code\manager.cpp(216): error C2065: 'MAX_EMPLOYEES' : undeclared identifier
+     1>c:\dropbox\csi24006\csi24006\code\manager.cpp(218): error C2065: 'employees' : undeclared identifier
+     1>c:\dropbox\csi24006\csi24006\code\manager.cpp(218): error C2228: left of '.mID' must have class/struct/union
+     1>c:\dropbox\csi24006\csi24006\code\manager.cpp(243): error C3861: 'pause': identifier not found
+     1>c:\dropbox\csi24006\csi24006\code\manager.cpp(268): error C2065: 'Employee' : undeclared identifier
+     1>c:\dropbox\csi24006\csi24006\code\manager.cpp(268): error C2146: syntax error : missing ';' before identifier 'updatedEmployee'
+     1>c:\dropbox\csi24006\csi24006\code\manager.cpp(268): error C2065: 'updatedEmployee' : undeclared identifier
+     1>c:\dropbox\csi24006\csi24006\code\manager.cpp(269): error C2065: 'updatedEmployee' : undeclared identifier
+     1>c:\dropbox\csi24006\csi24006\code\manager.cpp(270): error C2065: 'employees' : undeclared identifier
+     1>c:\dropbox\csi24006\csi24006\code\manager.cpp(270): error C2065: 'updatedEmployee' : undeclared identifier
+         host.cpp
+     1>c:\dropbox\csi24006\csi24006\code\host.h(29): error C2628: 'Table' followed by 'int' is illegal (did you forget a ';'?)
+     1>c:\dropbox\csi24006\csi24006\code\host.h(29): error C2440: 'initializing' : cannot convert from 'int' to 'Table'
+                 No constructor could take the source type, or constructor overload resolution was ambiguous
+     1>c:\dropbox\csi24006\csi24006\code\host.cpp(63): error C2784: 'bool std::operator <(const std::basic_string<_Elem,_Traits,_Alloc> &,const _Elem *)' : could not deduce template argument for 'const std::basic_string<_Elem,_Traits,_Alloc> &' from 'int'
+                 c:\program files (x86)\microsoft visual studio 12.0\vc\include\xstring(2545) : see declaration of 'std::operator <'
+     1>c:\dropbox\csi24006\csi24006\code\host.cpp(63): error C2784: 'bool std::operator <(const _Elem *,const std::basic_string<_Elem,_Traits,_Alloc> &)' : could not deduce template argument for 'const _Elem *' from 'int'
+                 c:\program files (x86)\microsoft visual studio 12.0\vc\include\xstring(2535) : see declaration of 'std::operator <'
+     1>c:\dropbox\csi24006\csi24006\code\host.cpp(63): error C2784: 'bool std::operator <(const std::basic_string<_Elem,_Traits,_Alloc> &,const std::basic_string<_Elem,_Traits,_Alloc> &)' : could not deduce template argument for 'const std::basic_string<_Elem,_Traits,_Alloc> &' from 'int'
+                 c:\program files (x86)\microsoft visual studio 12.0\vc\include\xstring(2525) : see declaration of 'std::operator <'
+     1>c:\dropbox\csi24006\csi24006\code\host.cpp(63): error C2784: 'bool std::operator <(const std::move_iterator<_RanIt> &,const std::move_iterator<_RanIt2> &)' : could not deduce template argument for 'const std::move_iterator<_RanIt> &' from 'int'
+                 c:\program files (x86)\microsoft visual studio 12.0\vc\include\xutility(1997) : see declaration of 'std::operator <'
+     1>c:\dropbox\csi24006\csi24006\code\host.cpp(63): error C2784: 'bool std::operator <(const std::reverse_iterator<_RanIt> &,const std::reverse_iterator<_RanIt2> &)' : could not deduce template argument for 'const std::reverse_iterator<_RanIt> &' from 'int'
+                 c:\program files (x86)\microsoft visual studio 12.0\vc\include\xutility(1155) : see declaration of 'std::operator <'
+     1>c:\dropbox\csi24006\csi24006\code\host.cpp(63): error C2784: 'bool std::operator <(const std::_Revranit<_RanIt,_Base> &,const std::_Revranit<_RanIt2,_Base2> &)' : could not deduce template argument for 'const std::_Revranit<_RanIt,_Base> &' from 'int'
+                 c:\program files (x86)\microsoft visual studio 12.0\vc\include\xutility(971) : see declaration of 'std::operator <'
+     1>c:\dropbox\csi24006\csi24006\code\host.cpp(63): error C2784: 'bool std::operator <(const std::pair<_Ty1,_Ty2> &,const std::pair<_Ty1,_Ty2> &)' : could not deduce template argument for 'const std::pair<_Ty1,_Ty2> &' from 'int'
+                 c:\program files (x86)\microsoft visual studio 12.0\vc\include\utility(230) : see declaration of 'std::operator <'
+     1>c:\dropbox\csi24006\csi24006\code\host.cpp(63): error C2677: binary '<' : no global operator found which takes type 'const Table' (or there is no acceptable conversion)
+     1>c:\dropbox\csi24006\csi24006\code\host.cpp(88): error C2784: 'bool std::operator <(const std::basic_string<_Elem,_Traits,_Alloc> &,const _Elem *)' : could not deduce template argument for 'const std::basic_string<_Elem,_Traits,_Alloc> &' from 'int'
+                 c:\program files (x86)\microsoft visual studio 12.0\vc\include\xstring(2545) : see declaration of 'std::operator <'
+     1>c:\dropbox\csi24006\csi24006\code\host.cpp(88): error C2784: 'bool std::operator <(const _Elem *,const std::basic_string<_Elem,_Traits,_Alloc> &)' : could not deduce template argument for 'const _Elem *' from 'int'
+                 c:\program files (x86)\microsoft visual studio 12.0\vc\include\xstring(2535) : see declaration of 'std::operator <'
+     1>c:\dropbox\csi24006\csi24006\code\host.cpp(88): error C2784: 'bool std::operator <(const std::basic_string<_Elem,_Traits,_Alloc> &,const std::basic_string<_Elem,_Traits,_Alloc> &)' : could not deduce template argument for 'const std::basic_string<_Elem,_Traits,_Alloc> &' from 'int'
+                 c:\program files (x86)\microsoft visual studio 12.0\vc\include\xstring(2525) : see declaration of 'std::operator <'
+     1>c:\dropbox\csi24006\csi24006\code\host.cpp(88): error C2784: 'bool std::operator <(const std::move_iterator<_RanIt> &,const std::move_iterator<_RanIt2> &)' : could not deduce template argument for 'const std::move_iterator<_RanIt> &' from 'int'
+                 c:\program files (x86)\microsoft visual studio 12.0\vc\include\xutility(1997) : see declaration of 'std::operator <'
+     1>c:\dropbox\csi24006\csi24006\code\host.cpp(88): error C2784: 'bool std::operator <(const std::reverse_iterator<_RanIt> &,const std::reverse_iterator<_RanIt2> &)' : could not deduce template argument for 'const std::reverse_iterator<_RanIt> &' from 'int'
+                 c:\program files (x86)\microsoft visual studio 12.0\vc\include\xutility(1155) : see declaration of 'std::operator <'
+     1>c:\dropbox\csi24006\csi24006\code\host.cpp(88): error C2784: 'bool std::operator <(const std::_Revranit<_RanIt,_Base> &,const std::_Revranit<_RanIt2,_Base2> &)' : could not deduce template argument for 'const std::_Revranit<_RanIt,_Base> &' from 'int'
+                 c:\program files (x86)\microsoft visual studio 12.0\vc\include\xutility(971) : see declaration of 'std::operator <'
+     1>c:\dropbox\csi24006\csi24006\code\host.cpp(88): error C2784: 'bool std::operator <(const std::pair<_Ty1,_Ty2> &,const std::pair<_Ty1,_Ty2> &)' : could not deduce template argument for 'const std::pair<_Ty1,_Ty2> &' from 'int'
+                 c:\program files (x86)\microsoft visual studio 12.0\vc\include\utility(230) : see declaration of 'std::operator <'
+     1>c:\dropbox\csi24006\csi24006\code\host.cpp(88): error C2677: binary '<' : no global operator found which takes type 'const Table' (or there is no acceptable conversion)
+     1>c:\dropbox\csi24006\csi24006\code\host.cpp(120): error C2784: 'bool std::operator <(const std::basic_string<_Elem,_Traits,_Alloc> &,const _Elem *)' : could not deduce template argument for 'const std::basic_string<_Elem,_Traits,_Alloc> &' from 'int'
+                 c:\program files (x86)\microsoft visual studio 12.0\vc\include\xstring(2545) : see declaration of 'std::operator <'
+     1>c:\dropbox\csi24006\csi24006\code\host.cpp(120): error C2784: 'bool std::operator <(const _Elem *,const std::basic_string<_Elem,_Traits,_Alloc> &)' : could not deduce template argument for 'const _Elem *' from 'int'
+                 c:\program files (x86)\microsoft visual studio 12.0\vc\include\xstring(2535) : see declaration of 'std::operator <'
+     1>c:\dropbox\csi24006\csi24006\code\host.cpp(120): error C2784: 'bool std::operator <(const std::basic_string<_Elem,_Traits,_Alloc> &,const std::basic_string<_Elem,_Traits,_Alloc> &)' : could not deduce template argument for 'const std::basic_string<_Elem,_Traits,_Alloc> &' from 'int'
+                 c:\program files (x86)\microsoft visual studio 12.0\vc\include\xstring(2525) : see declaration of 'std::operator <'
+     1>c:\dropbox\csi24006\csi24006\code\host.cpp(120): error C2784: 'bool std::operator <(const std::move_iterator<_RanIt> &,const std::move_iterator<_RanIt2> &)' : could not deduce template argument for 'const std::move_iterator<_RanIt> &' from 'int'
+                 c:\program files (x86)\microsoft visual studio 12.0\vc\include\xutility(1997) : see declaration of 'std::operator <'
+     1>c:\dropbox\csi24006\csi24006\code\host.cpp(120): error C2784: 'bool std::operator <(const std::reverse_iterator<_RanIt> &,const std::reverse_iterator<_RanIt2> &)' : could not deduce template argument for 'const std::reverse_iterator<_RanIt> &' from 'int'
+                 c:\program files (x86)\microsoft visual studio 12.0\vc\include\xutility(1155) : see declaration of 'std::operator <'
+     1>c:\dropbox\csi24006\csi24006\code\host.cpp(120): error C2784: 'bool std::operator <(const std::_Revranit<_RanIt,_Base> &,const std::_Revranit<_RanIt2,_Base2> &)' : could not deduce template argument for 'const std::_Revranit<_RanIt,_Base> &' from 'int'
+                 c:\program files (x86)\microsoft visual studio 12.0\vc\include\xutility(971) : see declaration of 'std::operator <'
+     1>c:\dropbox\csi24006\csi24006\code\host.cpp(120): error C2784: 'bool std::operator <(const std::pair<_Ty1,_Ty2> &,const std::pair<_Ty1,_Ty2> &)' : could not deduce template argument for 'const std::pair<_Ty1,_Ty2> &' from 'int'
+                 c:\program files (x86)\microsoft visual studio 12.0\vc\include\utility(230) : see declaration of 'std::operator <'
+     1>c:\dropbox\csi24006\csi24006\code\host.cpp(120): error C2677: binary '<' : no global operator found which takes type 'const Table' (or there is no acceptable conversion)
+     1>c:\dropbox\csi24006\csi24006\code\host.cpp(143): error C2784: 'bool std::operator <(const std::basic_string<_Elem,_Traits,_Alloc> &,const _Elem *)' : could not deduce template argument for 'const std::basic_string<_Elem,_Traits,_Alloc> &' from 'int'
+                 c:\program files (x86)\microsoft visual studio 12.0\vc\include\xstring(2545) : see declaration of 'std::operator <'
+     1>c:\dropbox\csi24006\csi24006\code\host.cpp(143): error C2784: 'bool std::operator <(const _Elem *,const std::basic_string<_Elem,_Traits,_Alloc> &)' : could not deduce template argument for 'const _Elem *' from 'int'
+                 c:\program files (x86)\microsoft visual studio 12.0\vc\include\xstring(2535) : see declaration of 'std::operator <'
+     1>c:\dropbox\csi24006\csi24006\code\host.cpp(143): error C2784: 'bool std::operator <(const std::basic_string<_Elem,_Traits,_Alloc> &,const std::basic_string<_Elem,_Traits,_Alloc> &)' : could not deduce template argument for 'const std::basic_string<_Elem,_Traits,_Alloc> &' from 'int'
+                 c:\program files (x86)\microsoft visual studio 12.0\vc\include\xstring(2525) : see declaration of 'std::operator <'
+     1>c:\dropbox\csi24006\csi24006\code\host.cpp(143): error C2784: 'bool std::operator <(const std::move_iterator<_RanIt> &,const std::move_iterator<_RanIt2> &)' : could not deduce template argument for 'const std::move_iterator<_RanIt> &' from 'int'
+                 c:\program files (x86)\microsoft visual studio 12.0\vc\include\xutility(1997) : see declaration of 'std::operator <'
+     1>c:\dropbox\csi24006\csi24006\code\host.cpp(143): error C2784: 'bool std::operator <(const std::reverse_iterator<_RanIt> &,const std::reverse_iterator<_RanIt2> &)' : could not deduce template argument for 'const std::reverse_iterator<_RanIt> &' from 'int'
+                 c:\program files (x86)\microsoft visual studio 12.0\vc\include\xutility(1155) : see declaration of 'std::operator <'
+     1>c:\dropbox\csi24006\csi24006\code\host.cpp(143): error C2784: 'bool std::operator <(const std::_Revranit<_RanIt,_Base> &,const std::_Revranit<_RanIt2,_Base2> &)' : could not deduce template argument for 'const std::_Revranit<_RanIt,_Base> &' from 'int'
+                 c:\program files (x86)\microsoft visual studio 12.0\vc\include\xutility(971) : see declaration of 'std::operator <'
+     1>c:\dropbox\csi24006\csi24006\code\host.cpp(143): error C2784: 'bool std::operator <(const std::pair<_Ty1,_Ty2> &,const std::pair<_Ty1,_Ty2> &)' : could not deduce template argument for 'const std::pair<_Ty1,_Ty2> &' from 'int'
+                 c:\program files (x86)\microsoft visual studio 12.0\vc\include\utility(230) : see declaration of 'std::operator <'
+     1>c:\dropbox\csi24006\csi24006\code\host.cpp(143): error C2677: binary '<' : no global operator found which takes type 'const Table' (or there is no acceptable conversion)
+     1>c:\dropbox\csi24006\csi24006\code\host.cpp(164): error C2511: 'void Host::hostUserMenu(Table [])' : overloaded member function not found in 'Host'
+                 c:\dropbox\csi24006\csi24006\code\host.h(33) : see declaration of 'Host'
+     1>c:\dropbox\csi24006\csi24006\code\host.cpp(180): error C2352: 'Host::searchTableSeat' : illegal call of non-static member function
+                 c:\dropbox\csi24006\csi24006\code\host.h(47) : see declaration of 'Host::searchTableSeat'
+     1>c:\dropbox\csi24006\csi24006\code\host.cpp(183): error C2352: 'Host::searchTableAvailable' : illegal call of non-static member function
+                 c:\dropbox\csi24006\csi24006\code\host.h(46) : see declaration of 'Host::searchTableAvailable'
+     1>c:\dropbox\csi24006\csi24006\code\host.cpp(188): error C2352: 'Host::assignTable' : illegal call of non-static member function
+                 c:\dropbox\csi24006\csi24006\code\host.h(43) : see declaration of 'Host::assignTable'
+     1>c:\dropbox\csi24006\csi24006\code\host.cpp(193): error C2352: 'Host::freeTable' : illegal call of non-static member function
+                 c:\dropbox\csi24006\csi24006\code\host.h(44) : see declaration of 'Host::freeTable'
+         functions.cpp
+     1>c:\dropbox\csi24006\csi24006\code\header.h(37): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+     1>c:\dropbox\csi24006\csi24006\code\functions.cpp(50): error C2065: 'TableObj' : undeclared identifier
+     1>c:\dropbox\csi24006\csi24006\code\functions.cpp(50): error C2228: left of '.menu' must have class/struct/union
+                 type is 'unknown-type'
+     1>c:\dropbox\csi24006\csi24006\code\functions.cpp(53): error C2065: 'KitchenObj' : undeclared identifier
+     1>c:\dropbox\csi24006\csi24006\code\functions.cpp(53): error C2228: left of '.menu' must have class/struct/union
+                 type is 'unknown-type'
+     1>c:\dropbox\csi24006\csi24006\code\functions.cpp(56): error C3861: 'login': identifier not found
+     1>c:\dropbox\csi24006\csi24006\code\functions.cpp(59): error C3861: 'logout': identifier not found
+     1>c:\dropbox\csi24006\csi24006\code\functions.cpp(62): error C2065: 'ManagerObj' : undeclared identifier
+     1>c:\dropbox\csi24006\csi24006\code\functions.cpp(62): error C2228: left of '.menu' must have class/struct/union
+                 type is 'unknown-type'
+         final.cpp
+     1>c:\dropbox\csi24006\csi24006\code\header.h(37): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+         Table.cpp
+     1>c:\dropbox\csi24006\csi24006\code\table.cpp(25): error C2533: 'Table::{ctor}' : constructors not allowed a return type
+     1>c:\dropbox\csi24006\csi24006\code\table.cpp(228): error C2065: 'Node' : undeclared identifier
+     1>c:\dropbox\csi24006\csi24006\code\table.cpp(228): error C2065: 'nodePtr' : undeclared identifier
+     1>c:\dropbox\csi24006\csi24006\code\table.cpp(228): error C2065: 'previousNodePtr' : undeclared identifier
+     1>c:\dropbox\csi24006\csi24006\code\table.cpp(236): error C2065: 'mHead' : undeclared identifier
+     1>c:\dropbox\csi24006\csi24006\code\table.cpp(241): error C2065: 'mHead' : undeclared identifier
+     1>c:\dropbox\csi24006\csi24006\code\table.cpp(241): error C2227: left of '->itemName' must point to class/struct/union/generic type
+                 type is 'unknown-type'
+     1>c:\dropbox\csi24006\csi24006\code\table.cpp(243): error C2065: 'nodePtr' : undeclared identifier
+     1>c:\dropbox\csi24006\csi24006\code\table.cpp(243): error C2065: 'mHead' : undeclared identifier
+     1>c:\dropbox\csi24006\csi24006\code\table.cpp(244): error C2065: 'mHead' : undeclared identifier
+     1>c:\dropbox\csi24006\csi24006\code\table.cpp(244): error C2227: left of '->mNext' must point to class/struct/union/generic type
+                 type is 'unknown-type'
+     1>c:\dropbox\csi24006\csi24006\code\table.cpp(245): error C2065: 'nodePtr' : undeclared identifier
+     1>c:\dropbox\csi24006\csi24006\code\table.cpp(245): error C2541: 'delete' : cannot delete objects that are not pointers
+     1>c:\dropbox\csi24006\csi24006\code\table.cpp(249): error C2065: 'nodePtr' : undeclared identifier
+     1>c:\dropbox\csi24006\csi24006\code\table.cpp(249): error C2065: 'mHead' : undeclared identifier
+     1>c:\dropbox\csi24006\csi24006\code\table.cpp(251): error C2065: 'nodePtr' : undeclared identifier
+     1>c:\dropbox\csi24006\csi24006\code\table.cpp(251): error C2227: left of '->itemName' must point to class/struct/union/generic type
+                 type is 'unknown-type'
+     1>c:\dropbox\csi24006\csi24006\code\table.cpp(251): fatal error C1903: unable to recover from previous error(s); stopping compilation
+         LinkedList.cpp
+         Kitchen.cpp
+     1>c:\dropbox\csi24006\csi24006\code\header.h(37): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+     1>c:\dropbox\csi24006\csi24006\code\kitchen.h(43): error C2061: syntax error : identifier 'Table'
+     1>c:\dropbox\csi24006\csi24006\code\kitchen.cpp(102): error C2556: 'Menu Kitchen::createMenu(void)' : overloaded function differs only by return type from 'void Kitchen::createMenu(void)'
+                 c:\dropbox\csi24006\csi24006\code\kitchen.h(41) : see declaration of 'Kitchen::createMenu'
+     1>c:\dropbox\csi24006\csi24006\code\kitchen.cpp(102): error C2371: 'Kitchen::createMenu' : redefinition; different basic types
+                 c:\dropbox\csi24006\csi24006\code\kitchen.h(41) : see declaration of 'Kitchen::createMenu'
+     1>c:\dropbox\csi24006\csi24006\code\kitchen.cpp(173): error C2065: 'Table' : undeclared identifier
+     1>c:\dropbox\csi24006\csi24006\code\kitchen.cpp(173): error C2146: syntax error : missing ')' before identifier 'mainArray'
+     1>c:\dropbox\csi24006\csi24006\code\kitchen.cpp(173): error C2761: 'void Kitchen::viewOrder(void)' : member function redeclaration not allowed
+     1>c:\dropbox\csi24006\csi24006\code\kitchen.cpp(173): error C2059: syntax error : ')'
+     1>c:\dropbox\csi24006\csi24006\code\kitchen.cpp(174): error C2143: syntax error : missing ';' before '{'
+     1>c:\dropbox\csi24006\csi24006\code\kitchen.cpp(174): error C2447: '{' : missing function header (old-style formal list?)
+         Employee.cpp
+     1>c:\dropbox\csi24006\csi24006\code\employee.cpp(77): error C2039: 'getType' : is not a member of 'Employee'
+                 c:\dropbox\csi24006\csi24006\code\employee.h(33) : see declaration of 'Employee'
+     1>c:\dropbox\csi24006\csi24006\code\employee.cpp(78): error C2143: syntax error : missing '}' before 'return'
+     1>c:\dropbox\csi24006\csi24006\code\employee.cpp(78): error C2143: syntax error : missing ';' before 'return'
+     1>c:\dropbox\csi24006\csi24006\code\employee.cpp(78): error C2059: syntax error : 'return'
+     1>c:\dropbox\csi24006\csi24006\code\employee.cpp(79): error C2059: syntax error : '}'
+     1>c:\dropbox\csi24006\csi24006\code\employee.cpp(79): error C2143: syntax error : missing ';' before '}'
+     1>c:\dropbox\csi24006\csi24006\code\employee.cpp(82): error C2143: syntax error : missing ';' before '{'
+     1>c:\dropbox\csi24006\csi24006\code\employee.cpp(82): error C2447: '{' : missing function header (old-style formal list?)
+     1>c:\dropbox\csi24006\csi24006\code\employee.cpp(113): error C2065: 'mType' : undeclared identifier
+     1>c:\dropbox\csi24006\csi24006\code\employee.cpp(179): error C2059: syntax error : '}'
+     1>c:\dropbox\csi24006\csi24006\code\employee.cpp(179): error C2143: syntax error : missing ';' before '}'
+     1>c:\dropbox\csi24006\csi24006\code\employee.cpp(181): error C2255: 'friend' : not allowed outside of a class definition
+     1>c:\dropbox\csi24006\csi24006\code\employee.cpp(182): error C2143: syntax error : missing ';' before '{'
+     1>c:\dropbox\csi24006\csi24006\code\employee.cpp(182): error C2447: '{' : missing function header (old-style formal list?)
+         Generating Code...
+     1>Done Building Project "C:\Dropbox\csi24006\csi24006\code\code.vcxproj" (Build target(s)) -- FAILED.
+
+Build FAILED.
+
+Time Elapsed 00:00:02.39
