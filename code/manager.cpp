@@ -1,24 +1,3 @@
-/*
-Class: CSI-240-06
-Assignment: FINAL PROJECT
-Date Assigned: 3/17/15
-Due Date: 4/24/15 11:00AM
-
-Description:
-A class for organizing table data for a restaurant program
-
-Certification of Authenticity:
-We certify that this is entirely our own work, except where we have given fully
-documented references to the work of others. We understand the definition and
-consequences of plagiarism and acknowledge that the assessor of this assignment
-may, for the purpose of assessing this assignment:
--Reproduce this assignment and provide a copy to another member of
-academic staff; and/or
--Communicate a copy of this assignment to a plagiarism checking service
-(which may then retain a copy of this assignment on its database for
-the purpose of future plagiarism checking)
-*/
-
 #include "manager.h"
 
 Manager::Manager()
@@ -27,7 +6,7 @@ Manager::Manager()
 
 Manager::Manager(string password)
 {
-	mPassword = password;
+    mPassword = password;
 }
 
 Manager::~Manager()
@@ -83,26 +62,26 @@ double Manager::dailyAveragePerOrder()
 *      Post:  Employee data is removed from the array
 *    Author:  Justin Fernandez
 *****************************************************************/
-void Manager::fireEmployee()
+void Manager::fireEmployee(Employee employees[])
 {
-    string id;
-    int employeeLocation;
-    
-    cout << "Enter employee ID\n";
-    cin >> id;
-    
-    employeeLocation = searchEmployee(id);
-    
-    if(employeeLocation != -1)
-    {
-        for(int i = employeeLocation; i < (MAX_EMPLOYEES - 2); i++)
-        {
-            employees[i] = employees[i + 1];
-        }
-        
-        Employee newEmployee;
-        employees[MAX_EMPLOYEES - 1] = newEmployee;
-    }
+	int id;
+	int employeeLocation;
+
+	cout << "Enter employee ID\n";
+	cin >> id;
+
+	employeeLocation = searchEmployee(id, employees);
+
+	if (employeeLocation != -1)
+	{
+		for (int i = employeeLocation; i < (MAX_EMPLOYEES - 2); i++)
+		{
+			employees[i] = employees[i + 1];
+		}
+
+		Employee newEmployee;
+		employees[MAX_EMPLOYEES - 1] = newEmployee;
+	}
 }
 
 /* Function:  Generate Report
@@ -114,21 +93,21 @@ void Manager::fireEmployee()
 void Manager::generateReport()
 {
 	ofstream fout;
-	fout.open("sales.txt", ios::app)
-	
-	fout << "Sales Report for " << _TIMESTAMP_ << ":\n"
-		 << "Total Sales: " << mTotalSale << endl
-	     << "Total Orders: " << mNumOfOrders << endl
-	     << "Average $ per Order: " << dailyAveragePerOrder()
-	     << endl << endl;
-	
+	fout.open("sales.txt", ios::app);
+
+		fout << "Sales Report for " << __TIMESTAMP__ << ":\n"
+		<< "Total Sales: " << mTotalSale << endl
+		<< "Total Orders: " << mNumOfOrders << endl
+		<< "Average $ per Order: " << dailyAveragePerOrder()
+		<< endl << endl;
+
 	fout.close();
-	
-	cout << "Sales Report for " << _TIMESTAMP_ << ":\n"
-		 << "Total Sales: " << mTotalSale << endl
-	     << "Total Orders: " << mNumOfOrders << endl
-	     << "Average $ per Order: " << dailyAveragePerOrder()
-	     << endl;
+
+	cout << "Sales Report for " << __TIMESTAMP__ << ":\n"
+		<< "Total Sales: " << mTotalSale << endl
+		<< "Total Orders: " << mNumOfOrders << endl
+		<< "Average $ per Order: " << dailyAveragePerOrder()
+		<< endl;
 }
 
 /* Function:  Hire Employee
@@ -137,21 +116,21 @@ void Manager::generateReport()
 *      Post:  Employee data is added to the array
 *    Author:  Duncan Carroll
 *****************************************************************/
-void Manager::hireEmployee()
+void Manager::hireEmployee(Employee employees[])
 {
-    for(int i = 0; i < MAX_EMPLOYEES; i++)
-    {
-        if(employees[i].mId == "")
-        {
-            Employee newEmployee;
-            cin >> newEmployee;
-            employees[i] = newEmployee;
-            return;
-        }
-    }
-    
-    cout << "Cannot hire any more employees\n";
-    pause();
+	for (int i = 0; i < MAX_EMPLOYEES; i++)
+	{
+		if (employees[i].getId() == ' ')
+		{
+			Employee newEmployee;
+			cin >> newEmployee;
+			employees[i] = newEmployee;
+			return;
+		}
+	}
+
+	cout << "Cannot hire any more employees\n";
+	pause();
 }
 
 /* Function:  Main Menu
@@ -160,49 +139,49 @@ void Manager::hireEmployee()
 *      Post:  carrys out selected menu option
 *    Author:  Tony Taylor
 *****************************************************************/
-bool mngrMainMenu()
+bool Manager::menu(Kitchen kitchen[], Host host[])
 {
-    char choice;
-    
-    do
-    {
-        clear();
-        
-        cout << setw(8) << left << "Choice" << left << "Option\n"
-		    << setw(8) << left << "U"  << left << "Update Employee\n"
-		    << setw(8) << left << "H"  << left << "Hire Employee\n"
-		    << setw(8) << left << "F"  << left << "Fire Employee\n"
-            << setw(8) << left << "R"  << left << "Return\n"
-    		<< setw(8) << left << "S"  << left << "Shut Down\n";
-        
-        cout << "Choice:  ";
-        cin >> choice;
-        
-        choice = toupper(choice);
-        
-        switch(choice)
-        {
-            case 'U': updateEmployee();
-                break;
-                
-            case 'H': hireEmployee();
-                break;
-                
-            case 'F': fireEmployee();
-                break;
-                
-            case 'R': return false;
-                break;
-                
-            case 'S': return shutDown();
-                break;
-                
-            default : cout << "Invalid Entry";
-                break;
-        }
-        
-        
-    }while(choice != 'S');
+	char choice;
+
+	do
+	{
+		clearScreen();
+
+		cout << setw(8) << left << "Choice" << left << "Option\n"
+			<< setw(8) << left << "U" << left << "Update Employee\n"
+			<< setw(8) << left << "H" << left << "Hire Employee\n"
+			<< setw(8) << left << "F" << left << "Fire Employee\n"
+			<< setw(8) << left << "R" << left << "Return\n"
+			<< setw(8) << left << "S" << left << "Shut Down\n";
+
+		cout << "Choice:  ";
+		cin >> choice;
+
+		choice = toupper(choice);
+
+		switch (choice)
+		{
+		case 'U': updateEmployee(employees);
+			break;
+
+		case 'H': hireEmployee(employees);
+			break;
+
+		case 'F': fireEmployee(employees);
+			break;
+
+		case 'R': return false;
+			break;
+
+		case 'S': return shutDown();
+			break;
+
+		default: cout << "Invalid Entry";
+			break;
+		}
+	} while (choice != 'S');
+
+   return false;
 }
 
 /* Function:  Search Employees
@@ -211,16 +190,16 @@ bool mngrMainMenu()
 *      Post:  Returns true if employee is found
 *    Author:  Justin Fernandez
 *****************************************************************/
-int Manager::searchEmployee(string searchKey)
+int Manager::searchEmployee(int searchKey, Employee employees[])
 {
-    for(int i = 0; i < MAX_EMPLOYEES; i++)
-    {
-        if(employees[i].mID == searchKey)
-            return i;
-    }
-    
-    cout << "Employee not found\n";
-    return -1;
+	for (int i = 0; i < MAX_EMPLOYEES; i++)
+	{
+		if (employees[i].getId() == searchKey)
+			return i;
+	}
+
+	cout << "Employee not found\n";
+	return -1;
 }
 
 /* Function:  Shut Down
@@ -232,11 +211,11 @@ int Manager::searchEmployee(string searchKey)
 bool Manager::shutDown()
 {
 	char option;
-	
+
 	cout << "Do you wish to shut down? Y/N \n";
 	cin >> option;
-	
-	if(option == 'Y' || option == 'y')
+
+	if (option == 'Y' || option == 'y')
 	{
 		cout << "Generating Sales Report:\n";
 		generateReport();
@@ -253,21 +232,20 @@ bool Manager::shutDown()
 *      Post:  Employee data in the array is replaced
 *    Author:  Tony Taylor
 *****************************************************************/
-void Manager::updateEmployee()
+void Manager::updateEmployee(Employee employees[])
 {
-    string id;
-    int employeeLocation;
-    
-    cout << "Enter employee ID\n";
-    cin >> id;
-    
-    employeeLocation = searchEmployee(id);
-    
-    if(employeeLocation != -1)
-    {
-        Employee updatedEmployee;
-        cin >> updatedEmployee;
-        employees[employeeLocation] = updatedEmployee;
-    }
-}
+	int id;
+	int employeeLocation;
 
+	cout << "Enter employee ID\n";
+	cin >> id;
+
+	employeeLocation = searchEmployee(id, employees);
+
+	if (employeeLocation != -1)
+	{
+		Employee updatedEmployee;
+		cin >> updatedEmployee;
+		employees[employeeLocation] = updatedEmployee;
+	}
+}

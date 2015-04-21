@@ -21,19 +21,29 @@ the purpose of future plagiarism checking)
 
 #include "kitchen.h"
 
+//Constructor
 Kitchen::Kitchen()
 {
 }
 
-/*
-************************************************
-Author:		Danielle Barry
-Function:	addDailyItems(Menu menu)
-Pre:		none
-Post:		none
-Purpose:	add the daily items to the menu
-************************************************
-*/
+//deconstructor
+Kitchen::~Kitchen()
+{
+	
+}
+
+//Accessor
+bool Kitchen::getStatus()
+{
+	return mStatus;
+}
+
+/* Function:  addDailyItems
+*   Purpose:  Add daily items to the menu
+*       Pre:  none
+*      Post: Menu items are added 
+*    Author:  Danielle Barry
+*****************************************************************/
 void Kitchen::addDailyItems(Menu menu)
 {
 	string name, desc;
@@ -48,8 +58,10 @@ void Kitchen::addDailyItems(Menu menu)
 		getline(cin, name);
 		cout << "Price of dish: " << endl;
 		cin >> price;
+		cin.ignore();
 		cout << "Quantity of dish: " << endl;
 		cin >> quantity;
+		cin.ignore();
 		cout << "Description of dish (<= 80 characters): " << endl;
 		getline(cin, desc);
 
@@ -68,7 +80,6 @@ void Kitchen::addDailyItems(Menu menu)
 *      Post: mstatus changed to true
 *    Author: Alex Taxiera
 ****************************************************************/
-
 bool Kitchen::changeStatus()
 {
 	bool status = false;
@@ -97,7 +108,6 @@ bool Kitchen::changeStatus()
 *      Post: Menu created
 *    Author: Damon Devani
 ****************************************************************/
-
 Menu Kitchen::createMenu()
 {
 	string stringInput, junk;
@@ -159,17 +169,19 @@ Menu Kitchen::createMenu()
 	}
 
 	fin.close();
+	
+	addDailyItems(menu);
 
 	return menu;
 
 }
 
-
-bool Kitchen::getStatus()
-{
-	return mStatus;
-}
-
+/* Function:  viewOrder
+*   Purpose:  To output the order to the screen
+*       Pre:  none
+*      Post:  Order is outputted
+*    Author:  Stephen Brikiatis
+*****************************************************************/
 void Kitchen::viewOrder(Table mainArray[], int MAX_TABLES)
 {
 	int id;
@@ -187,7 +199,38 @@ void Kitchen::viewOrder(Table mainArray[], int MAX_TABLES)
 	}
 }
 
+/* Function:  Operator Overloading
+*   Purpose:  Overload the output operator
+*       Pre:  None 
+*      Post:  The output operator is overloaded
+*    Author:  Duncan Carroll
+*****************************************************************/
 ofstream operator<<(ofstream fout, Menu menu)
 {
+//add entress to the text file in the same format as the menu.txt
+	for (int i = 0; i < 6; i++)
+	{
+		fout << menu.mEntrees[i] << endl
+			<< menu.mEntreesCost[i] << endl
+			<< menu.mNumEntrees[i] << endl
+			<< menu.mEntreesDesc[i] << endl;
+	}
+	//adds appetizers
+	for (int i = 0; i < 3; i++)
+	{
+		fout << menu.mAppetizers[i] << endl
+			<< menu.mAppetizersCost[i] << endl
+			<< menu.mNumAppetizers[i] << endl
+			<< menu.mAppetizersDesc[i] << endl;
+	}
+	//adds desserts
+	for (int i = 0; i < 2; i++)
+	{
+		fout << menu.mDesserts[i] << endl
+			<< menu.mDessertsCost[i] << endl
+			<< menu.mNumDesserts[i] << endl
+			<< menu.mDessertsDesc[i] << endl;
+	}
 
+	return fout;
 }

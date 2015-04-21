@@ -1,29 +1,8 @@
-/*
-Class: CSI-240-06
-Assignment: FINAL PROJECT
-Date Assigned: 3/17/15
-Due Date: 4/24/15 11:00AM
-
-Description:
-A class for organizing table data for a restaurant program
-
-Certification of Authenticity:
-We certify that this is entirely our own work, except where we have given fully
-documented references to the work of others. We understand the definition and
-consequences of plagiarism and acknowledge that the assessor of this assignment
-may, for the purpose of assessing this assignment:
--Reproduce this assignment and provide a copy to another member of
-academic staff; and/or
--Communicate a copy of this assignment to a plagiarism checking service
-(which may then retain a copy of this assignment on its database for
-the purpose of future plagiarism checking)
-*/
-
 #include "Employee.h"
 
-Employee:: Employee()
+Employee::Employee()
 {
-	mId = 0;
+	mId = ' ';
 	mName = "";
 	mWages = 0.0;
 	mAddress = "";
@@ -32,7 +11,7 @@ Employee:: Employee()
 }
 
 Employee::Employee(int Id, string Name, string Address, string Phone, double Wages,
-		bool Working)
+	bool Working, string Password)
 {
 	mId = Id;
 	mName = Name;
@@ -73,7 +52,7 @@ string Employee::getPhone()
 	return mPhone;
 }
 
-string Employee::getType
+char Employee::getType()
 {
 	return mType;
 }
@@ -81,6 +60,11 @@ string Employee::getType
 bool Employee::getWorking()
 {
 	return mWorking;
+}
+
+string Employee::getPassword()
+{
+	return mPassword;
 }
 
 void Employee::setId(int id)
@@ -108,25 +92,29 @@ void Employee::setPhone(string phone)
 	mPhone = phone;
 }
 
-void setType(string type)
+void Employee::setType(char type)
 {
 	mType = type;
 }
-
 
 void Employee::setWorking(bool work)
 {
 	mWorking = work;
 }
 
+void Employee::setPassword(string password)
+{
+	mPassword = password;
+}
+
 void generalEmployeeLogin(int id)
 {
-	
+
 }
 
 void generalEmployeeLogout(int id)
 {
-	
+
 }
 
 /* Function:  Password Masking
@@ -146,7 +134,7 @@ string passwordMask()
 
 	while ((ch = _getch()) != RETURN)
 	{
-		
+
 		if (ch == BACKSPACE)
 		{
 			if (password.length() != 0)
@@ -157,9 +145,9 @@ string passwordMask()
 			}
 		}
 
-		else if (ch == 0 || ch == 224) 
+		else if (ch == 0 || ch == 224)
 		{
-			_getch(); 
+			_getch();
 			continue;
 		}
 
@@ -175,31 +163,87 @@ string passwordMask()
 	cout << endl;
 
 	return password;
-	}
 }
 
-friend istream &operator>>(istream &input, Employee &e)
+/* Function:  Operator Overloading
+*   Purpose:  Overload the input operator
+*       Pre:  None
+*      Post:  The input operator is overloaded and an employee object is edited
+*    Author:  Lucas Spiker + Duncan Carroll
+*****************************************************************/
+istream &operator>>(istream &input, Employee &e)
 {
-    string str;
-    
-    cout << "Enter new ID:  ";
-    getline(cin, e.mId);
-    
-    cout << "Enter new name:  ";
-    getline(cin, e.mName);
-    
-    cout << "Enter new address:  ";
-    getline(cin, e.mAddress);
-    
-    cout << "Enter new phone number:  ";
-    getline(cin, e.mPhone);
-    
-    cout << "Enter new wages:  ";
-    getline(cin, str);
-    m.mWages = stod(str);
-    
-    cout << "Enter new position:  ";
-    getline(cin, e.mType);
-    
-    return cin;
+	bool valid = false;
+	string tmp;
+
+	while (!valid)
+	{
+		valid = true;
+		cout << "Enter new ID:  ";
+		getline(cin, tmp);
+		//Make sure only numbers were entered.
+		for (int i = 0; i < static_cast<int>(tmp.length()); i++)
+		{
+			if (!isdigit(tmp[i]))
+			{
+				valid = false;
+			}
+		}
+	}
+	e.mId = stoi(tmp);
+	valid = false;
+
+	while (!valid)
+	{
+		cout << "Enter new name:  ";
+		getline(cin, tmp);
+		//Make sure there were at least two names entered.
+      for (int i = 0; i < static_cast<int>(tmp.length()); i++)
+		{
+			if (tmp[i] == ' ')
+			{
+				e.mName = tmp;
+				valid = true;
+			}
+		}
+	}
+	valid = false;
+
+	cout << "Enter new address:  ";
+	getline(cin, e.mAddress);
+
+	while (!valid)
+	{
+		cout << "Enter new phone number:  ";
+		getline(cin, tmp);
+		//Make sure that the number is formatted properly. "(###) ###-####"
+		if (tmp[0] == '(' &&
+			tmp[4] == ')' &&
+			tmp[5] == ' ' &&
+			tmp[9] == '-')
+		{
+			e.mPhone = tmp;
+			valid = true;
+		}
+
+	}
+	valid = false;
+
+	while (!valid)
+	{
+		valid = true;
+		cout << "Enter new wages:  ";
+		getline(cin, tmp);
+      for (int i = 0; i < static_cast<int>(tmp.length()); i++)
+		{
+			if (!isdigit(tmp[i]) && tmp[i] != '.')
+			{
+				valid = false;
+			}
+		}
+	}
+	e.mWages = stod(tmp);
+	valid = false;
+
+	return cin;
 }

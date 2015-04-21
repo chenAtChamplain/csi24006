@@ -1,24 +1,3 @@
-/*
-Class: CSI-240-06
-Assignment: FINAL PROJECT
-Date Assigned: 3/17/15
-Due Date: 4/24/15 11:00AM
-
-Description:
-A class for organizing table data for a restaurant program
-
-Certification of Authenticity:
-We certify that this is entirely our own work, except where we have given fully
-documented references to the work of others. We understand the definition and
-consequences of plagiarism and acknowledge that the assessor of this assignment
-may, for the purpose of assessing this assignment:
--Reproduce this assignment and provide a copy to another member of
-academic staff; and/or
--Communicate a copy of this assignment to a plagiarism checking service
-(which may then retain a copy of this assignment on its database for
-the purpose of future plagiarism checking)
-*/
-
 #ifndef EMPLOYEE_H
 #define EMPLOYEE_H
 
@@ -33,14 +12,15 @@ class Employee
 {
 protected:
 	int mId;
-	string mName, mAddress, mPhone;
+	string mName, mAddress, mPhone, mPassword;
 	double mWages;
 	bool mWorking;
+	char mType;
 
 public:
 	Employee();
-	Employee(int mId, string mName, string mAddress, string mPhone, double mWages,
-		bool mWorking);
+	Employee(int Id, string Name, string Address, string Phone, double Wages,
+		bool Working, string Password);
 	~Employee();
 
 	//accessors
@@ -50,6 +30,8 @@ public:
 	string getAddress();
 	string getPhone();
 	bool getWorking();
+	char getType();
+	string getPassword();
 
 	//mutators
 	void setId(int id);
@@ -58,6 +40,8 @@ public:
 	void setAddress(string address);
 	void setPhone(string phone);
 	void setWorking(bool wook);
+	void setType(char type);
+	void setPassword(string password);
 
 	void generalEmployeeLogin(int id);
 	void generalEmployeeLogout(int id);

@@ -22,13 +22,17 @@ the purpose of future plagiarism checking)
 #ifndef _MANAGER_H
 #define _MANAGER_H
 
-#include <iostream>
-#include <iomanip>
-#include <string>
-#include <fstream>
+//#include "header.h"
 #include "ctype.h"
+#include "Employee.h"
+#include "host.h"
+#include "Kitchen.h"
+#include "common.h"
+#include <fstream>
 
 using namespace std;
+
+const int MAX_EMPLOYEES = 10;
 
 class Manager : public Employee
 {
@@ -49,19 +53,20 @@ public:
 	string getPassword();
 	double getTotalSale();
 	int getNumOfOrders();
-	
+
 	//Mutator
 	void setPassword(string password);
-	void setTotalSale();
-	void setNumOfOrders();
+	void setTotalSale(double sale);
+	void setNumOfOrders(int orders);
 
 	double dailyAveragePerOrder();
-	void fireEmployee();
+	void fireEmployee(Employee employees[]);
 	void generateReport();
-	void hireEmployee();
-	bool mngrMainMenu();
-	int searchEmployee(string searchKey);
+	void hireEmployee(Employee employees[]);
+   bool menu(Kitchen kitchen[], Host host[]);
+	int searchEmployee(int searchKey, Employee employees[]);
 	bool shutDown();
-	void updateEmployee();
-}
+	void updateEmployee(Employee employees[]);
+};
+
 #endif

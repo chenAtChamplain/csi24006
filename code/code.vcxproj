@@ -64,6 +64,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="commoncpp.cpp" />
     <ClCompile Include="Employee.cpp" />
     <ClCompile Include="final.cpp" />
     <ClCompile Include="functions.cpp" />
@@ -74,6 +75,7 @@
     <ClCompile Include="Table.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="common.h" />
     <ClInclude Include="Employee.h" />
     <ClInclude Include="header.h" />
     <ClInclude Include="host.h" />

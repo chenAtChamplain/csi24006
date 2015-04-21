@@ -1,24 +1,3 @@
-/*
-Class: CSI-240-06
-Assignment: FINAL PROJECT
-Date Assigned: 3/17/15
-Due Date: 4/24/15 11:00AM
-
-Description:
-A class for organizing table data for a restaurant program
-
-Certification of Authenticity:
-We certify that this is entirely our own work, except where we have given fully
-documented references to the work of others. We understand the definition and
-consequences of plagiarism and acknowledge that the assessor of this assignment
-may, for the purpose of assessing this assignment:
--Reproduce this assignment and provide a copy to another member of
-academic staff; and/or
--Communicate a copy of this assignment to a plagiarism checking service
-(which may then retain a copy of this assignment on its database for
-the purpose of future plagiarism checking)
-*/
-
 #include "Table.h"
 
 Table::Table()
@@ -37,7 +16,7 @@ Table::~Table()
 void Table::changeOrder()
 {
 	string holdOrder, orderChange, holdString, tempHold;
-	int count;
+	int count = 0;
 	bool found = false;
 	LinkedList temp;
 
@@ -172,7 +151,7 @@ bool Table::searchForItem(string itemsName, int arraySize, string arrayOfNames[]
 
 double Table::generateBill(Menu todayMenu)
 {
-	double totalBill, holderDouble;
+	double totalBill = 0, holderDouble;
 	string current;
 	int num = 0;;
 	bool found = false;
@@ -224,11 +203,9 @@ double Table::generateBill(Menu todayMenu)
 void Table::deleteOrder()
 {
 	string item;
-	int count;
-	Node *nodePtr, *previousNodePtr; //Not sure how I can get this to work with what we have right now. One way that can fix this is to change private to protected in
-	//LinkedList.h and have table be a children of LinkedList.h. Not sure if this will mess anyone else up, so I didn't change anything yet. 
-	//Does anyone know another fix? - Brian.
-	
+//	int count;
+	LinkedList tmp;
+	Node *nodePtr, *previousNodePtr = NULL; 
 
 	cout << "What item do you want to delete?\n";
 	getline(cin, item);

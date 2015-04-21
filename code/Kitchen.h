@@ -22,9 +22,14 @@ the purpose of future plagiarism checking)
 #ifndef _KITCHEN_H
 #define _KITCHEN_H
 
-#include "header.h"
+#include <iostream>
+#include <fstream>
+#include <string>
+#include "common.h"
+//#include "header.h"
 #include "Employee.h"
 #include "structMenu.h"
+#include "table.h"
 
 class Kitchen : protected Employee
 
@@ -38,9 +43,11 @@ public:
 
 	void addDailyItems(Menu menu);    //add dailies
 	bool changeStatus();
-	void createMenu();	//pull from text file?
+	Menu createMenu();	//pull from text file?
 	bool getStatus();
 	void viewOrder(Table mainArray[], int MAX_TABLES);
+	friend ofstream operator<<(ofstream fout, Menu menu);
 };
+
 #endif
 
